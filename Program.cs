@@ -414,13 +414,12 @@
             Func<TReturn>? defaultCase = null)
         {
             if (f0 is null
-                && f1 is null
-                && f2 is null
-                && f3 is null)
+                || f1 is null
+                || f2 is null
+                || f3 is null)
             {
                 if (defaultCase is null)
                     Debug.Fail("Not all cases have been covered");
-                return defaultCase();
             }
             if (f0 is not null
                 && f1 is not null
