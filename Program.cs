@@ -455,8 +455,6 @@
             {
                 if (defaultCase is null)
                     Debug.Fail("Not all cases have been covered");
-                defaultCase();
-                return;
             }
             if (f0 is not null
                 && f1 is not null
